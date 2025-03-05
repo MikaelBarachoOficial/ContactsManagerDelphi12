@@ -1,0 +1,49 @@
+unit UnCalculator;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    txtFirstValue: TEdit;
+    Label2: TLabel;
+    txtSecondValue: TEdit;
+    btnPlus: TButton;
+    btnMinus: TButton;
+    btnTimes: TButton;
+    btnDivided: TButton;
+    Label3: TLabel;
+    txtResult: TEdit;
+    procedure btnPlusClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnPlusClick(Sender: TObject);
+var
+    num1, num2, result: Real;
+begin
+
+    num1 := StrToFloat(txtFirstValue.Text);
+    num2 := StrToFloat(txtSecondValue.Text);
+
+    result := num1 + num2;
+
+    txtResult.Text := FloatToStr(result);
+
+end;
+
+end.

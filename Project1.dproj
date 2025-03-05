@@ -123,8 +123,12 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Unit1.pas">
+        <DCCReference Include="UnMain.pas">
+            <ModuleName>Unit1</ModuleName>
             <Form>Form1</Form>
+        </DCCReference>
+        <DCCReference Include="UnCalculator.pas">
+            <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
